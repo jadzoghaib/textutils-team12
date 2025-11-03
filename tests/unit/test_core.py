@@ -1,3 +1,7 @@
+def word_count(text):
+    from collections import Counter
+    words = text.lower().split()
+    return dict(Counter(words))
 def test_normalise_whitespace_remove_extra_spaces():
     text = ' a b \n c '
     assert c.normalise_whitespace(text) == 'a b c'
