@@ -1,6 +1,4 @@
-def is_palindrome(text):
-    cleaned = text.lower().replace(" ", "")
-    return cleaned == cleaned[::-1]
+
 def word_count(text):
     from collections import Counter
     words = text.lower().split()
@@ -16,3 +14,4 @@ def test_normalise_whitespace_remove_extra_spaces():
 def collapse_duplicates(text, char):
     import re
     return re.sub(f'{re.escape(char)}+', char, text)
+
