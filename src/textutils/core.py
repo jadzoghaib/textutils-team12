@@ -1,5 +1,3 @@
-def capitalize_sentences(text):
-    import re
-    sentences = re.split('([.!?] *)', text)
-    capitalized_sentences = [s.capitalize() for s in sentences]
-    return ''.join(capitalized_sentences)
+def is_palindrome(text):
+    cleaned = text.lower().replace(" ", "")
+    return cleaned == cleaned[::-1]
