@@ -1,3 +1,5 @@
+import textutils.core as c
+
 def is_palindrome(text):
     cleaned = text.lower().replace(" ", "")
     return cleaned == cleaned[::-1]
@@ -17,3 +19,12 @@ def collapse_duplicates(text, char):
     import re
     return re.sub(f'{re.escape(char)}+', char, text)
 
+def test_count_vowels_basic():
+    assert c.count_vowels("hello") == 2
+    assert c.count_vowels("sky") == 0
+    assert c.count_vowels("AEIOU") == 5
+
+def test_count_vowels_mixed_text():
+    assert c.count_vowels("Python 3.12!") == 1
+    assert c.count_vowels("bcd fgh") == 0
+    assert c.count_vowels("aEiOu") == 5
