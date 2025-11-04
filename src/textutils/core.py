@@ -18,3 +18,7 @@ def collapse_duplicates(text, char):
     import re
     return re.sub(f'{re.escape(char)}+', char, text)
 
+def count_vowels(text: str) -> int:
+    """Count the number of vowels in a given text."""
+    vowels = "aeiouAEIOU"
+    return sum(1 for char in text if char in vowels)
