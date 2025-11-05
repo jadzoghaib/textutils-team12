@@ -1,3 +1,13 @@
+def slugify(text):
+    import re
+    import unicodedata
+    text = unicodedata.normalize('NFD', text)
+    text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')
+    text = text.lower()
+    text = re.sub(r'&', 'and', text)
+    text = re.sub(r'[^a-z0-9]+', '-', text)
+    return text.strip('-')
+
 def test_normalise_whitespace_remove_extra_spaces():
     text = ' a b \n c '
     assert c.normalise_whitespace(text) == 'a b c'
