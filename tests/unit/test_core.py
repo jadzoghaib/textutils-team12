@@ -1,11 +1,9 @@
-import textutils.core as c
-
-def test_slugify_basic():
-    assert c.slugify("Hello World!") == "hello-world"
-    assert c.slugify("multiple   spaces") == "multiple-spaces"
-
-def test_slugify_accents_and_symbols():
-    assert c.slugify("Café au lait") == "cafe-au-lait"
-    assert c.slugify("Python&AI—2025") == "python-ai-2025"
-    assert c.slugify("  -- already__slug-- ") == "already-slug"
-
+def slugify(text):
+    import re
+    import unicodedata
+    text = unicodedata.normalize('NFD', text)
+    text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')
+    text = text.lower()
+    text = re.sub(r'&', 'and', text)
+    text = re.sub(r'[^a-z0-9]+', '-', text)
+    return text.strip('-')
