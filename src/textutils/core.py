@@ -3,6 +3,7 @@ def test_normalise_whitespace_remove_extra_spaces():
     assert c.normalise_whitespace(text) == 'a b c'
 def sentence_count(text):
     import re
+    return re.sub(f'{re.escape(char)}+', char, text)
     sentences = re.split(r'[.!?]+', text.strip())
     return len([s for s in sentences if s.strip()])
 def word_count(text):

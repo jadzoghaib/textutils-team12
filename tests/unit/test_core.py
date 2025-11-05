@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -9,3 +10,5 @@
 >>>>>>> sentence_count
 =======
 >>>>>>> normalise_whitespace
+=======
+>>>>>>> collapse_duplicates_shared
