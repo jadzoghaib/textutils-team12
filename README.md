@@ -92,4 +92,4 @@ This assignment was developed as a collaboratively using:
 •⁠  ⁠Continuous testing with pytest
 
 ### Project Description and Encountered Difficulties
-Class project for ESADE.
+This package was submitted as a collaborative assignment. We divided the work by implementing different features on separate branches, then resolved the merge conflicts as everything was brought together into the main branch. After completing development, we moved on to testing to ensure that all components functioned properly on both macOS and Windows.
