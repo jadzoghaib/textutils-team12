@@ -53,7 +53,7 @@ import re
 import unicodedata
 from collections import Counter
 
-## Slugify
+### Slugify
 def slugify(text):
     text = unicodedata.normalize('NFD', text)
     text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')
@@ -62,28 +62,28 @@ def slugify(text):
     text = re.sub(r'[^a-z0-9]+', '-', text)
     return text.strip('-')
 
-## Sentence Count
+### Sentence Count
 def sentence_count(text):
     sentences = re.split(r'[.!?]+', text.strip())
     return len([s for s in sentences if s.strip()])
 
-## Word Count
+### Word Count
 def word_count(text):
     words = text.lower().split()
     return dict(Counter(words))
 
-## Palindrome Checker
+### Palindrome Checker
 def is_palindrome(text):
     cleaned = text.lower().replace(" ", "")
     return cleaned == cleaned[::-1]
 
-## Vowels Count
+### Vowels Count
 def count_vowels(text):
     vowels = "aeiou"
     return sum(1 for char in text.lower() if char in vowels)
 ⁠
 
-## Development
+### Development
 
 This assignment was developed as a collaboratively using:
 •⁠  ⁠Test-Driven Development
@@ -91,5 +91,5 @@ This assignment was developed as a collaboratively using:
 •⁠  ⁠Git version control
 •⁠  ⁠Continuous testing with pytest
 
-## Project Description and Encountered Difficulties
+### Project Description and Encountered Difficulties
 Class project for ESADE.
