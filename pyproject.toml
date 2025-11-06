@@ -10,11 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 
 [tool.hatch.build.targets.wheel]
-<<<<<<< HEAD
-packages = ["src/textutils"]
-=======
 packages = ["src/textutils"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
->>>>>>> slugify_shared_jan
